@@ -1,24 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { Greet } from "./components/Greet";
+import { Button } from "./components/Button";
+import { Input } from "./components/Input";
+import { Box } from "./context/Box";
+import { ThemeContextProdvider } from "./context/ThemeContext";
+import { Counter } from "./components/Counter";
+import { User } from "./components/User";
+import { AuthContextProvider } from "./context/UserContext";
 
 function App() {
+  const name = {
+    first: "HP",
+    last: "Kizo",
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Greet name={name} isLoggedIn={true} messageCount={20}></Greet>
+      <Button
+        handleClick={(event, id) => {
+          console.log("Clicked", event, id);
+        }}
+      ></Button>
+      <Input value="" handleChange={(event) => console.log(event)} /> */}
+      {/* <ThemeContextProdvider>
+        <Box></Box>
+      </ThemeContextProdvider> */}
+      {/* <Counter></Counter> */}
+      <AuthContextProvider>
+        <User></User>
+      </AuthContextProvider>
     </div>
   );
 }
