@@ -4,7 +4,7 @@ import { AuthContext } from "../context/UserContext";
 export const User = () => {
   const userContext = useContext(AuthContext);
   const handleLogin = () => {
-    userContext.setUser({ name: "HPKizo", email: "test" });
+    userContext.setUser({ name: "Nguyen Van A", email: "nguyenvana@gmail.com" });
   };
   const handleLogout = () => {
     userContext.setUser(null);

@@ -2,9 +2,6 @@ import React from "react";
 type ButtonProps = {
   handleClick: (event: React.MouseEvent<HTMLButtonElement>, id: number) => void;
 };
-// const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-//   console.log("Button clicked!");
-// };
 
 export const Button = (props: ButtonProps) => {
   return (
